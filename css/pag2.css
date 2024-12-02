@@ -5,3 +5,30 @@
 body{
     background-color: rgb(201, 233, 222);
 }
+.custom-img {
+    width: 100%;
+    height: auto;
+}
+
+.hidden-text {
+    display: none;
+}
+
+.btn-custom {
+    background-color: #28a745;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #218838;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.btn-custom:active {
+    background-color: #1e7e34;
+}

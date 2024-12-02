@@ -72,28 +72,92 @@
   <h4>Parque Nacional da Šumava</h4>
   <p> Conhecido como a "Floresta Tcheca", este parque nacional é uma vasta área de florestas densas, lagos cristalinos e trilhas cênicas.
   Atividades: Caminhadas, ciclismo e observação de vida selvagem. O Lago de Lipno é um ótimo local para esportes aquáticos.</p>
+  <a href="https://www.tripadvisor.com.br/Attraction_Review-g274685-d313041-Reviews-Sumava_National_Park-Bohemia.html" target="_blank"> Visite o parque da Šumava </a>
   <br>
   <H4>Parque Nacional da Boêmia da Suíça</H4>
   <p>Este parque é famoso por suas formações rochosas únicas e desfiladeiros impressionantes, incluindo a famosa Ponte de Pedra (Pravčická brána).
   Atividades: Trilhas que levam a vistas espetaculares e passeios de barco pelo rio Kamenice.</p>
+  <a href="https://www.tripadvisor.com.br/Attraction_Review-g274685-d1549889-Reviews-Bohemian_Switzerland_National_Park-Bohemia.html" target="_blank">Viaje para os parques da Boêmia na suiça</a>
   <br>
   <h4>Castelo de Český Krumlov</h4>
   <p> Um dos castelos mais bem preservados da Europa, localizado na pitoresca cidade de Český Krumlov, listada como Patrimônio Mundial da UNESCO.
   Atividades: Visitas aos jardins do castelo, passeios pela cidade antiga e navegação no rio Vltava.</p>
-  <br>
+  <a href="https://pt.wikipedia.org/wiki/Castelo_de_Český_Krumlov" target="_blank">Informções sobre o castelo de Český Krumlov  </a>
   <br>
   <h4>Karlovy Vary</h4>
   <p>Uma famosa cidade termal conhecida por suas fontes de água mineral e arquitetura impressionante.
   Atividades: Relaxar em spas, degustar águas termais e visitar o Museu do Vidro de Bohemia.</p>
+  <a href="https://www.cnnbrasil.com.br/viagemegastronomia/viagem/karlovy-vary-republica-tcheca/" target="_blank">Veja sobre a cidade de  karlovy vary</a>
   <br>
   <h4>Cascatas de Mumlava:</h4>
   <p>Localizadas na região dos Montes Krkonoš, essas cascatas são um espetáculo natural imperdível.
   Atividades: Trilha até as cascatas e piqueniques nas áreas ao redor.</p>
+  <a href="https://www.tripadvisor.com.br/Attractions-g274684-Activities-c57-t95-Czech_Republic.html" target="_blank">Saiba mais sobre as cascatas da república theca</a>
   <br>
   <h4>Cavernas de Morávia:</h4>
   <p>As Cavernas de Punkva e as Cavernas de Balcarka são apenas algumas das impressionantes formações naturais que você pode explorar.
-  Atividades: Passeios guiados pelas cavernas e passeios de barco pelos rios subterrâneos.</p>
+  Atividades: Passeios guiados pelas cavernas e passeios de barco pelos rios subterrâneos</p>
+  <a href="https://www.tripadvisor.com.br/Attractions-g274712-Activities-c57-t54-Moravia.html" target="_blank">Saiba mais sobre as cavernas de Morávia</a>
   <br>
+
+  <div class="container mt-4">
+    <h2>Deixe sua Opinião</h2>
+    <div id="feedbackForm">
+        <div class="mb-3">
+            <label for="name" class="form-label">Nome:</label>
+            <input type="text" id="name" class="form-control" required>
+            <div id="nameError" class="invalid-feedback">
+                insira seu nome.
+            </diV>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">E-mail:</label>
+            <input type="email" id="email" class="form-control" required>
+            <div id="emailError" class="invalid-feedback">
+                insira um e-mail válido.
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Mensagem:</label>
+            <textarea id="message" class="form-control" rows="4" required></textarea>
+            <div id="messageError" class="invalid-feedback">
+                insira sua mensagem.
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary" onclick="validateForm(event)">Enviar</button>
+    </div>
+</div>
+
+<script>
+    function validateForm(event) {
+        event.preventDefault();
+        document.getElementById("nameError").style.display = "none";
+        document.getElementById("emailError").style.display = "none";
+        document.getElementById("messageError").style.display = "none";
+
+        let isValid = true;
+
+        const name = document.getElementById("name").value;
+        if (!name) {
+            document.getElementById("nameError").style.display = "block";
+            isValid = false;
+        }
+        const email = document.getElementById("email").value;
+        const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        if (!email || !emailRegex.test(email)) {
+            document.getElementById("emailError").style.display = "block";
+            isValid = false;
+        }
+        const message = document.getElementById("message").value;
+        if (!message) {
+            document.getElementById("messageError").style.display = "block";
+            isValid = false;
+        }
+        if (isValid) {
+            alert("Formulário enviado com sucesso");
+        }
+    }
+</script>
   <footer class="bg-dark text-light py-4 mt-3">
     <div class="container text-center">
         <p>Entre em contato conosco nas redes sociais:</p>
@@ -116,7 +180,8 @@
                     Facebook
                 </a>
             </li>
-        </ul>
-        <p>&copy; 2024 Global Viagens. Todos os direitos reservados.</p
-</body>
+        </ul> 
+        <p>&copy; 2024 Global Viagens. Todos os direitos reservados.</p 
+        </body>
+
 </html>
